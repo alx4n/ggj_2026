@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-
+var win = false
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
@@ -46,3 +46,14 @@ func _process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.y = move_toward(velocity.y, 0, SPEED)
 	move_and_slide()
+
+
+func _on_door_body_entered(body: Node2D) -> void:
+	if body == self:
+		pass
+	pass # Replace with function body.
+
+
+func _on_dog_body_entered(body: Node2D) -> void:
+	win = true
+	pass # Replace with function body.

@@ -90,23 +90,6 @@ states/right_walk_cycle/position = Vector2(543, 295)
 transitions = ["left_walk_cycle", "back_walk_cycle", SubResource("AnimationNodeStateMachineTransition_xeyu5"), "back_walk_cycle", "left_walk_cycle", SubResource("AnimationNodeStateMachineTransition_prk3m"), "left_walk_cycle", "front_walk_cycle", SubResource("AnimationNodeStateMachineTransition_8ehpy"), "front_walk_cycle", "left_walk_cycle", SubResource("AnimationNodeStateMachineTransition_isqdg"), "front_walk_cycle", "right_walk_cycle", SubResource("AnimationNodeStateMachineTransition_8c0e4"), "right_walk_cycle", "front_walk_cycle", SubResource("AnimationNodeStateMachineTransition_j8cqp"), "right_walk_cycle", "back_walk_cycle", SubResource("AnimationNodeStateMachineTransition_ydkkc"), "back_walk_cycle", "right_walk_cycle", SubResource("AnimationNodeStateMachineTransition_csrql"), "front_walk_cycle", "back_walk_cycle", SubResource("AnimationNodeStateMachineTransition_0cspk"), "back_walk_cycle", "front_walk_cycle", SubResource("AnimationNodeStateMachineTransition_ldvow"), "left_walk_cycle", "right_walk_cycle", SubResource("AnimationNodeStateMachineTransition_265qy"), "right_walk_cycle", "left_walk_cycle", SubResource("AnimationNodeStateMachineTransition_6qlpd"), "Start", "front_walk_cycle", SubResource("AnimationNodeStateMachineTransition_ju2b8")]
 graph_offset = Vector2(-47.0205, 64.7143)
 
-[sub_resource type="Animation" id="Animation_4d1t5"]
-resource_name = "right_walk_cycle"
-length = 0.45
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("leftRightSprite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.15, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [0, 1, 2]
-}
-
 [sub_resource type="Animation" id="Animation_bdoki"]
 length = 0.001
 tracks/0/type = "value"
@@ -134,21 +117,21 @@ tracks/1/keys = {
 "values": [0]
 }
 
-[sub_resource type="Animation" id="Animation_50a2c"]
-resource_name = "left_walk_cycle"
-length = 0.45
+[sub_resource type="Animation" id="Animation_dbbpb"]
+resource_name = "back_walk_cycle"
+length = 0.3
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("leftRightSprite:frame")
+tracks/0/path = NodePath("frontBackSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.15, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1),
+"times": PackedFloat32Array(0, 0.15),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [3, 4, 5]
+"values": [3, 2]
 }
 
 [sub_resource type="Animation" id="Animation_iv46h"]
@@ -168,21 +151,38 @@ tracks/0/keys = {
 "values": [0, 1]
 }
 
-[sub_resource type="Animation" id="Animation_dbbpb"]
-resource_name = "back_walk_cycle"
-length = 0.3
+[sub_resource type="Animation" id="Animation_50a2c"]
+resource_name = "left_walk_cycle"
+length = 0.45
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("frontBackSprite:frame")
+tracks/0/path = NodePath("leftRightSprite:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.15),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 0.15, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [3, 2]
+"values": [3, 4, 5]
+}
+
+[sub_resource type="Animation" id="Animation_4d1t5"]
+resource_name = "right_walk_cycle"
+length = 0.45
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("leftRightSprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xa3qg"]
