@@ -9,6 +9,7 @@ func _process(delta: float) -> void:
 		print("you win!")
 	var lr_direction := Input.get_axis("ui_left", "ui_right")
 	var ud_direction := Input.get_axis("ui_up", "ui_down")
+	$CanvasLayer/ProgressBar.value -= delta * 5
 	if lr_direction || ud_direction:
 		$idleSprite.visible = false
 		velocity.x = lr_direction * SPEED
